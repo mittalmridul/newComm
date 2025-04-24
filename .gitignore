@@ -61,6 +61,7 @@
     *.csv
     *.xlsx
     *.sql
+    .sqls
     *.dump
     # Flask stuff:
     instance/
