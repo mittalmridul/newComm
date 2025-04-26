@@ -1,0 +1,23 @@
+<nav class="glass fixed top-0 left-0 w-full z-30 shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+        <a href="{% url 'home' %}" class="flex items-center gap-2">
+            <img src="https://img.icons8.com/fluency/48/000000/shopping-cart.png" alt="Logo" class="h-8 w-8">
+            <span class="text-2xl font-extrabold text-green-400 tracking-tight">Shoply</span>
+        </a>
+        <div class="hidden md:flex items-center gap-6">
+            <a href="#" class="hover:text-green-400 font-medium transition">Browse</a>
+            <a href="#" class="hover:text-green-400 font-medium transition">Cart</a>
+            <a href="#" class="hover:text-green-400 font-medium transition">Orders</a>
+            <a href="{% url 'contact' %}" class="hover:text-green-400 font-medium transition">Contact Us</a>
+            <button @click="loginModal=true" class="spotify-green text-black px-5 py-2 rounded-full font-semibold shadow hover:brightness-110 transition">Login</button>
+            <button @click="signupModal=true" class="border border-green-400 text-green-400 px-5 py-2 rounded-full font-semibold hover:bg-green-900/30 transition">Sign Up</button>
+        </div>
+        <div class="md:hidden flex items-center">
+            <button @click="mobileNav = !mobileNav" class="focus:outline-none">
+                <svg class="w-7 h-7 text-green-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</nav>
