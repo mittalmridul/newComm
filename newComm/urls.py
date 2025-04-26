@@ -16,21 +16,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from django.http import HttpResponse
+from django.shortcuts import render
+from shop.views import home_view, contact_view
 
 # Define a simple health check view
 def ping_view(request):
     """A simple view that returns 'pong'."""
     return HttpResponse("pong", content_type="text/plain")
 
-def home_view(request):
-    """A simple view for home'."""
-    return HttpResponse("Welcome to HomePage. This Will be updated soon", content_type="text/plain")
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("shop/", include("shop.urls")),
-    path('ping/', ping_view, name='ping'), # Add the ping endpoint
-    path('', home_view, name='home'), # Add the home endpoint
-
+    path('ping/', ping_view, name='ping'),
+    path('contact/', contact_view, name='contact'),
+    path('', home_view, name='home'),
 ]
+

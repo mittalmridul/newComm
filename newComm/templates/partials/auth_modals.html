@@ -1,0 +1,31 @@
+<!-- newComm/templates/partials/auth_modals.html -->
+<div>
+    <!-- Login Modal -->
+    <div x-show="loginModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70" style="display: none;">
+        <div class="bg-gray-900 rounded-2xl shadow-2xl max-w-sm w-full p-8 relative">
+            <button @click="loginModal=false" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl font-bold">&times;</button>
+            <h2 class="text-2xl font-bold text-green-400 mb-4">Login</h2>
+            <form>
+                <input type="text" placeholder="Username" class="w-full mb-3 px-4 py-2 rounded bg-black border border-green-700 text-white focus:outline-none focus:ring-2 focus:ring-green-400">
+                <input type="password" placeholder="Password" class="w-full mb-3 px-4 py-2 rounded bg-black border border-green-700 text-white focus:outline-none focus:ring-2 focus:ring-green-400">
+                <button type="submit" class="spotify-green text-black px-4 py-2 rounded-full font-semibold w-full hover:brightness-110 transition">Login</button>
+            </form>
+        </div>
+    </div>
+    <!-- Signup Modal -->
+    <div x-show="signupModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70" style="display: none;">
+        <div class="bg-gray-900 rounded-2xl shadow-2xl max-w-sm w-full p-8 relative">
+            <button @click="signupModal=false" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl font-bold">&times;</button>
+            <h2 class="text-2xl font-bold text-green-400 mb-4">Sign Up</h2>
+            <form>
+                <input type="text" placeholder="First Name" class="w-full mb-3 px-4 py-2 rounded bg-black border border-green-700 text-white focus:outline-none focus:ring-2 focus:ring-green-400">
+                <input type="text" placeholder="Last name" class="w-full mb-3 px-4 py-2 rounded bg-black border border-green-700 text-white focus:outline-none focus:ring-2 focus:ring-green-400">
+                <input type="text" placeholder="Phone" class="w-full mb-3 px-4 py-2 rounded bg-black border border-green-700 text-white focus:outline-none focus:ring-2 focus:ring-green-400">
+                <input type="text" placeholder="Username" class="w-full mb-3 px-4 py-2 rounded bg-black border border-green-700 text-white focus:outline-none focus:ring-2 focus:ring-green-400">
+                <input type="email" placeholder="Email" class="w-full mb-3 px-4 py-2 rounded bg-black border border-green-700 text-white focus:outline-none focus:ring-2 focus:ring-green-400">
+                <input type="password" placeholder="Password" class="w-full mb-3 px-4 py-2 rounded bg-black border border-green-700 text-white focus:outline-none focus:ring-2 focus:ring-green-400">
+                <button type="submit" class="spotify-green text-black px-4 py-2 rounded-full font-semibold w-full hover:brightness-110 transition">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</div>
